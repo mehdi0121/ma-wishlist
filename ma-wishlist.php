@@ -1,6 +1,6 @@
 <?php
 
-class MAL_WISHLIST {
+class MA_WISHLIST {
 
 	public static $_instance = null;
 
@@ -26,6 +26,9 @@ class MAL_WISHLIST {
 			require_once ABSPATH."wp-admin/includes/plugin.php";
 		}
 
+		define('MAW_BASE_FILE',__FILE__);
+		define('MAW_PATH',trailingslashit(plugin_dir_path(MAW_BASE_FILE)));
+		define('MAW_URL',trailingslashit(plugin_dir_url(MAW_BASE_FILE)));
 
 
 
@@ -59,4 +62,4 @@ class MAL_WISHLIST {
 }
 
 
-MAL_WISHLIST::instanse();
+MA_WISHLIST::instanse();
